@@ -3,9 +3,8 @@
 /*============ RESET ============*/
 body {
   overflow-x: hidden;
-  font-family: "Lato", sans-serif;
-  color: #505962;
-}
+  font-family: 'Lato', sans-serif;
+  color: #505962; }
 
 /*--- Nav Scrolling Offset --*/
 /* EXL: scroll to corresponding <div> */
@@ -13,55 +12,73 @@ body {
   height: 4rem;
   margin-top: -4rem;
   content: "";
-  display: block;
-}
+  display: block; }
 
 /*--- Extra Bootstrap Column Padding --*/
 /* EXL: CSS Attribute Selector => https://www.w3schools.com/css/css_attribute_selectors.asp */
-[class*=col-] {
+[class*="col-"] {
   /* select any class contain 'col-' */
-  padding: 1rem;
-}
+  padding: 1rem; }
 
 /*============ NAVIGATION ============*/
 #logo {
-  height: 2rem;
-}
+  height: 2rem; }
 
 #burger {
   color: white;
-  font-size: 1.5rem;
-}
+  font-size: 1.5rem; }
 
 .navbar {
-  padding: 0.7rem 2rem;
+  padding: .7rem 2rem;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: .9rem;
   font-weight: 700;
-  letter-spacing: 0.1rem;
+  letter-spacing: .1rem;
   /* EXL: 0.5 sec transition with 0 sec delay */
-  transition: background-color 0.5s ease 0s;
-}
-.navbar.solid {
-  background: rgba(0, 0, 0, 0.7) !important;
-  transition: background-color 1s ease 0s;
-}
+  transition: background-color .5s ease 0s; }
+  .navbar.solid {
+    background: rgba(0, 0, 0, 0.7) !important;
+    transition: background-color 1s ease 0s; }
 
 .navbar-nav li {
-  padding-right: 0.8rem;
-}
+  padding-right: .8rem; }
 .navbar-nav .nav-link {
   color: white;
-  padding: 0.8rem 0 0;
-}
-.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
-  color: #1ebba3;
-}
+  padding: .8rem 0 0; }
+  .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    color: #1ebba3; }
 
 /*============ LANDING IMG ============*/
 .home-inner {
-  background-image: url("img/computers.png");
-}
+  background-image: url("img/bg.jpg"); }
+
+.caption {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 38%;
+  z-index: 1; }
+  .caption h1 {
+    color: white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    text-shadow: .25rem .25rem .8rem black;
+    padding-bottom: 1rem; }
+  .caption h3 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-shadow: .1rem .1rem .4rem black;
+    padding-bottom: 2rem; }
+  .caption .btn-lg {
+    border-width: thin;
+    border-radius: 0;
+    padding: .8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: inline-block !important; }
 
 /*============ BOOTSTRAP BREAK POINTS:
 
