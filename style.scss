@@ -57,13 +57,13 @@ body {
 
 .navbar-nav {
 	li {
-		padding: 0 .8rem 0 0;
+		padding-right: .8rem;
 	}
 	.nav-link {
 		color: white;
 		padding: .8rem 0 0;
 
-		.active, &:hover {
+		&.active, &:hover {
 			color: $navy;
 		}
 	}

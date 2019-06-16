@@ -4,7 +4,7 @@ $(document).ready(() => { //when document(DOM) loads completely.
         // Transition effect for navbar
         $(window).scroll(() => { //function is called while you scrolls
           // checks if window is scrolled more than 300px, adds/removes solid class
-          if($(this).scrollTop() > 300)   // this refers to scroll()
+          if($(this).scrollTop() > 300)   // this refers to scroll() caller
               $('.navbar').addClass('solid'); //add class 'solid' to 'navbar'
           else
               $('.navbar').removeClass('solid'); //remove class 'solid' from 'navbar'
@@ -31,13 +31,13 @@ $(document).ready(() => {
     // event.target equals to this in function(){ this }
     // console.log(event.target);
     // Make sure this.hash has a value before overriding default behavior, e.g. href="#contact"
-    if (this.hash !== '') { //for e.g. website.com#home - #home
+    if (event.target.hash !== '') { //for e.g. website.com#home - #home
       // Prevent default anchor click behavior
       event.preventDefault();
 
       // Store hash
       let hash = event.target.hash;
-      // console.log('hash:',hash)
+      console.log('hash:',hash)
 
       // Using jQuery's animate(animation()[, time, completion()]) method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
