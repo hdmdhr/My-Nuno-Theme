@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+body {
+	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
+	color: #505962;
+	background-color: #505962; /* to see nav before adding landing img */
+}
+
+/*--- Nav Scrolling Offset --*/
+/* EXL: scroll to corresponding <div> */
+.offset:before {
+	height: 4rem;
+	margin-top: -4rem;
+	content: "";
+	display: block;
+}
+
+/*--- Extra Bootstrap Column Padding --*/
+/* EXL: CSS Attribute Selector => https://www.w3schools.com/css/css_attribute_selectors.asp */
+[class*="col-"] {  /* select any class contain 'col-' */
+	padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
