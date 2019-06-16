@@ -1,24 +1,23 @@
 /*========== NAVBAR TRANSPARENT TO SOLID ==========*/
 
-$(document).ready(function() { //when document(DOM) loads completely. 
-        // Transition effect for navbar 
-        $(window).scroll(function() { //function is called while you scrolls 
+$(document).ready(() => { //when document(DOM) loads completely.
+        // Transition effect for navbar
+        $(window).scroll(() => { //function is called while you scrolls
           // checks if window is scrolled more than 300px, adds/removes solid class
-          if($(this).scrollTop() > 300) { 
-              $('.navbar').addClass('solid'); //add class 'solid' in any element which has class 'navbar'
-          } else {
-              $('.navbar').removeClass('solid'); //remove class 'solid' in any element which has class 'navbar'
-          }
+          if($(this).scrollTop() > 300)   // this refers to scroll()
+              $('.navbar').addClass('solid'); //add class 'solid' to 'navbar'
+          else
+              $('.navbar').removeClass('solid'); //remove class 'solid' from 'navbar'
         });
 });
 
 /*========== CLOSE MOBILE NAV ON CLICK ==========*/
 
-$(document).ready(function () { //when document loads completely.
-    $(document).click(function (event) { //click anywhere
-        var clickover = $(event.target); //get the target element where you clicked
-        var _opened = $(".navbar-collapse").hasClass("show"); //check if element with 'navbar-collapse' class has a class called show. Returns true and false.
-        if (_opened === true && !clickover.hasClass("navbar-toggler")) { // if _opened is true and clickover(element we clicked) doesn't have 'navbar-toggler' class
+$(document).ready(() => { //when document loads completely.
+    $(document).click((event) => { //click anywhere
+        let clickover = $(event.target); //get the target element where you clicked
+        let _opened = $(".navbar-collapse").hasClass("show"); //check if 'navbar-collapse' has a class 'show' (add by Bootstrap).
+        if (_opened && !clickover.hasClass("navbar-toggler")) { // if _opened is true and clickover(element we clicked) doesn't have 'navbar-toggler' class
             $(".navbar-toggler").click(); //toggle the navbar; close the navbar menu in mobile.
         }
     });
@@ -26,25 +25,25 @@ $(document).ready(function () { //when document loads completely.
 
 /*========== SMOOTH SCROLLING TO LINKS ==========*/
 
-$(document).ready(function(){ //document is loaded
+$(document).ready(() => {
   // Add smooth scrolling to all links
-  $("a").on('click', function(event) {//click on any link;anchor tag;
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") { //for e.g. website.com#home - #home
+  $('a').click((event) => {//click on any link;anchor tag;
+    // event.target equals to this in function(){ this }
+    // console.log(event.target);
+    // Make sure this.hash has a value before overriding default behavior, e.g. href="#contact"
+    if (this.hash !== '') { //for e.g. website.com#home - #home
       // Prevent default anchor click behavior
       event.preventDefault();
 
       // Store hash
-      var hash = this.hash;
-      //console.log('hash:',hash)
+      let hash = event.target.hash;
+      // console.log('hash:',hash)
 
-      // Using jQuery's animate() method to add smooth page scroll
+      // Using jQuery's animate(animation()[, time, completion()]) method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({ //animate whole html and body elements
         scrollTop: $(hash).offset().top //scroll to the element with that hash
-      }, 800, function(){
-   
+      }, 1200, () => {
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash; //website.com - website.com#home
         //Optional remove "window.location.hash = hash;" to prevent transparent navbar on load
@@ -56,7 +55,7 @@ $(document).ready(function(){ //document is loaded
 /*========== BOUNCING DOWN ARROW ==========*/
 //down arrow at top
 $(document).ready(function(){
-$(window).scroll(function(){ //browser scroll 
+$(window).scroll(function(){ //browser scroll
     $(".arrow").css("opacity", 1 - $(window).scrollTop() / 250); //set opacity css from 1 to -(negative) infinity of element with class 'arrow'
   //250 is fade pixels
   });
@@ -82,7 +81,7 @@ $(document).ready(function(){ //when document is ready
             },
             // min-width: 768px
             768 : {
-                items: 3 //on devices with width 768px and above show 3 slides 
+                items: 3 //on devices with width 768px and above show 3 slides
             }
         }
   }
@@ -154,25 +153,25 @@ $(document).ready(function(){
 $(document).ready(function(){
 
     // Select and loop the container element of the elements you want to equalise
-    $('.row').each(function(){  
-      
+    $('.row').each(function(){
+
       // Cache the highest
       var highestBox = 0;
-      
+
       // Select and loop the elements you want to equalise
       $('.pricing-column,.card-body', this).each(function(){
-        
+
         // If this box is higher than the cached highest then store it
         if($(this).height() > highestBox) {
-          highestBox = $(this).height(); 
+          highestBox = $(this).height();
         }
-      
-      });  
-            
-      // Set the height of all those children to whichever was highest 
+
+      });
+
+      // Set the height of all those children to whichever was highest
       $('.pricing-column,.card-body',this).height(highestBox);
-                    
-    }); 
+
+    });
 
 });
 

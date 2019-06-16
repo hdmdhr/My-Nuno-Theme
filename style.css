@@ -1,34 +1,54 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+/*============ Global Vars ============*/
+/*============ RESET ============*/
 body {
-	overflow-x: hidden;
-	font-family: 'Lato', sans-serif;
-	color: #505962;
-	background-color: #505962; /* to see nav before adding landing img */
-}
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #505962;
+  background-color: #505962;
+  /* TODO: only to see nav before adding landing img */ }
 
 /*--- Nav Scrolling Offset --*/
 /* EXL: scroll to corresponding <div> */
 .offset:before {
-	height: 4rem;
-	margin-top: -4rem;
-	content: "";
-	display: block;
-}
+  height: 4rem;
+  margin-top: -4rem;
+  content: "";
+  display: block; }
 
 /*--- Extra Bootstrap Column Padding --*/
 /* EXL: CSS Attribute Selector => https://www.w3schools.com/css/css_attribute_selectors.asp */
-[class*="col-"] {  /* select any class contain 'col-' */
-	padding: 1rem;
-}
+[class*="col-"] {
+  /* select any class contain 'col-' */
+  padding: 1rem; }
 
+/*============ NAVIGATION ============*/
+#logo {
+  height: 2rem; }
 
+#burger {
+  color: white;
+  font-size: 1.5rem; }
 
+.navbar {
+  padding: .7rem 2rem;
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  /* EXL: 0.5 sec transition with 0 sec delay */
+  transition: background-color .5s ease 0s; }
+  .navbar.solid {
+    background: rgba(0, 0, 0, 0.7) !important;
+    transition: background-color 1s ease 0s; }
 
-
-
-
-
+.navbar-nav li {
+  padding: 0 .8rem 0 0; }
+.navbar-nav .nav-link {
+  color: white;
+  padding: .8rem 0 0; }
+  .navbar-nav .nav-link .active, .navbar-nav .nav-link:hover {
+    color: #1ebba3; }
 
 /*============ BOOTSTRAP BREAK POINTS:
 
@@ -48,3 +68,5 @@ Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 
 =============*/
+
+/*# sourceMappingURL=style.css.map */
