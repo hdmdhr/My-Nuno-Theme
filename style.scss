@@ -11,7 +11,6 @@ body {
 	overflow-x: hidden;
 	font-family: 'Lato', sans-serif;
 	color: #505962;
-	background-color: #505962; /* TODO: only to see nav before adding landing img */
 }
 
 /*--- Nav Scrolling Offset --*/
@@ -70,7 +69,11 @@ body {
 	}
 }
 
+/*============ LANDING IMG ============*/
 
+.home-inner {
+	background-image: url('img/computers.png');
+}
 
 
 
