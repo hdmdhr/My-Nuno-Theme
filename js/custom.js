@@ -1,3 +1,4 @@
+// jshint esversion:6
 /*========== NAVBAR TRANSPARENT TO SOLID ==========*/
 
 $(document).ready(() => { //when document(DOM) loads completely.
@@ -37,7 +38,7 @@ $(document).ready(() => {
 
       // Store hash
       let hash = event.target.hash;
-      console.log('hash:',hash)
+      // console.log('hash:',hash);
 
       // Using jQuery's animate(animation()[, time, completion()]) method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
@@ -54,10 +55,10 @@ $(document).ready(() => {
 
 /*========== BOUNCING DOWN ARROW ==========*/
 //down arrow at top
-$(document).ready(function(){
-$(window).scroll(function(){ //browser scroll
+$(document).ready(() => {
+$(window).scroll(() => { //browser scroll
     $(".arrow").css("opacity", 1 - $(window).scrollTop() / 250); //set opacity css from 1 to -(negative) infinity of element with class 'arrow'
-  //250 is fade pixels
+  //250 pixels is disappear threshold
   });
 });
 
