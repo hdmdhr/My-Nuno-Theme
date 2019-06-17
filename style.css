@@ -8,11 +8,16 @@ body {
 
 /*--- Nav Scrolling Offset --*/
 /* EXL: scroll to corresponding <div> */
-.offset:before {
-  height: 4rem;
-  margin-top: -4rem;
-  content: "";
-  display: block; }
+.offset {
+  padding: 0 5rem; }
+  .offset::before {
+    height: 4rem;
+    margin-top: -4rem;
+    content: "";
+    display: block; }
+
+.caption {
+  padding: 0 2rem; }
 
 /*--- Extra Bootstrap Column Padding --*/
 /* EXL: CSS Attribute Selector => https://www.w3schools.com/css/css_attribute_selectors.asp */
@@ -24,9 +29,12 @@ body {
 #logo {
   height: 2rem; }
 
-#burger {
-  color: white;
-  font-size: 1.5rem; }
+.navbar-toggler {
+  border: solid 1px white;
+  border-radius: .2; }
+  .navbar-toggler #burger {
+    color: white;
+    font-size: 1.5rem; }
 
 .navbar {
   padding: .7rem 2rem;

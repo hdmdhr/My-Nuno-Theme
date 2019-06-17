@@ -18,10 +18,17 @@ $(document).ready(() => { //when document loads completely.
     $(document).click((event) => { //click anywhere
         let clickover = $(event.target); //get the target element where you clicked
         let _opened = $(".navbar-collapse").hasClass("show"); //check if 'navbar-collapse' has a class 'show' (add by Bootstrap).
-        if (_opened && !clickover.hasClass("navbar-toggler")) { // if _opened is true and clickover(element we clicked) doesn't have 'navbar-toggler' class
+        if (_opened && !clickover.hasClass("navbar-toggler")) // if _opened is true and clickover(element we clicked) doesn't have 'navbar-toggler' class
             $(".navbar-toggler").click(); //toggle the navbar; close the navbar menu in mobile.
-        }
     });
+});
+
+/*----- Turn on/off .solid background when burger menu open/close -----*/
+$(".navbar-toggler").click((event) => {
+  if ($(".navbar-collapse").hasClass("show"))  // about to close
+    $('.navbar').removeClass('solid');
+  else  // about to open
+    $('.navbar').addClass('solid');
 });
 
 /*========== SMOOTH SCROLLING TO LINKS ==========*/
