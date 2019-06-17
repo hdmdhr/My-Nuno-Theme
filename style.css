@@ -115,15 +115,18 @@ body {
   margin-bottom: 0;
   border-radius: 0;
   padding: 1rem 0 3rem; }
-  .jumbotron h3.heading {
-    font-size: 1.9rem;
-    font-weight: 700;
-    text-transform: uppercase; }
-  .jumbotron .heading-underline {
-    width: 5rem;
-    height: .2rem;
-    background-color: #1ebba3;
-    margin: 0 auto 2rem; }
+
+h3.heading {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center; }
+
+.heading-underline {
+  width: 5rem;
+  height: .2rem;
+  background-color: #1ebba3;
+  margin: 0 auto 2rem; }
 
 .feature .fa-layers {
   color: #1ebba3;
@@ -134,6 +137,19 @@ body {
   padding-bottom: .4rem; }
 .feature p {
   font-size: 1.1rem; }
+
+/*============ FIXED IMG DARK ============*/
+#fixed {
+  background-image: url("img/fixed/apple.png");
+  z-index: 1; }
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 7rem 2rem;
+  text-align: center;
+  z-index: 999 !important; }
+  .dark h3, .dark p {
+    color: lightgray; }
 
 /*============ BOOTSTRAP BREAK POINTS:
 
